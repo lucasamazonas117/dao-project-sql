@@ -62,6 +62,8 @@ public class SellerDaoJDBC implements SellerDao {
 				sel.setBirthDate(rs.getDate("BirthDate"));
 				sel.setDepartment(dep);
 				return sel;
+			} else {
+				return null;
 			}
 		} catch (SQLException e) {
 			throw new DbException(e.getMessage());
